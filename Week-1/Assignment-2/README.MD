@@ -2,7 +2,7 @@
 Welcome to Pesto assignment - 2 from the Week 1.
 
 ## Screenshots
-![Screenshot](/assets/images/Screenshot.png)
+![Screenshot](./assets/images/Screenshot.png)
 
 ## Built with
 - HTML
