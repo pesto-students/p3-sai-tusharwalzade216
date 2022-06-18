@@ -77,6 +77,7 @@ It's important to understand here that this is an iterative/ gradual process. As
 Parsing a document means translating it to a structure the code can use. It results in a tree of nodes that represent the structure of the document, which is called a Parse/ Syntax tree.
 
 For example, parsing the expression `1 + 2 - 3` could generate this tree -
+
 ![Fig 3](./assets/images/parser.png)
 
 ## Grammar
@@ -117,6 +118,7 @@ The DOM has an almost one-to-one relation to the markup. For example:
 ```
 
 would be converted into following DOM tree -
+
 ![Fig 4](./assets/images/html_parser.png)
 
 ### CSS Parser
@@ -124,6 +126,7 @@ would be converted into following DOM tree -
 Similar to the HTML Parser, the job of CSS parser is to parse CSS. It uses the lexical grammar defined by the regular expressions for each tokens such as identifier, classname etc.
 
 Example:
+
 ![Fig 5](./assets/images/css_parser.png)
 
 ## Script Processors
