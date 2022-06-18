@@ -1,8 +1,8 @@
 # Pesto Assignments
-Welcome to Pesto assignment - 2 from the Week 1.
+Welcome to Pesto assignment - 2 from the [Week 1](https://pestotech.teachable.com/courses/1782350/lectures/40231525).
 
 ## Screenshots
-![Screenshot](./assets/images/Screenshot.png)
+![Screenshot](./assets/images/screenshot.png)
 
 ## Built with
 - HTML

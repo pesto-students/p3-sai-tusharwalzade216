@@ -25,12 +25,12 @@ footer > div {
 }
 
 footer > div.footer-info > img {
-  height: calc(8vh - 8px);
-  padding: 4px;
+  height: calc(8vh - 0.4em);
+  padding: 0.2em;
 }
 
 footer > div.footer-info > p {
-  font-size: 1.75vmin;
+  font-size: 1.8vmin;
   color: whitesmoke;
   display: flex;
   flex-direction: column;
@@ -51,7 +51,7 @@ footer > div.footer-actions > ul > li {
 }
 
 footer > div.footer-actions > ul > li > button > em {
-  font-size: 1.5vmax;
+  font-size: 1.6vmax;
 }
 
 footer > div.footer-actions > ul > li > button {
@@ -59,7 +59,7 @@ footer > div.footer-actions > ul > li > button {
   border-style: none;
   color: whitesmoke;
   height: 8vh;
-  padding: 0.5vmax;
+  padding: 0.4vmax;
   width: inherit;
 }
 
@@ -84,8 +84,8 @@ footer > div.footer-actions > ul > li > button:active {
 }
 
 .header > img {
-  height: calc(25vh - 24px);
-  padding: 12px;
+  height: calc(25vh - 1.6em);
+  padding: 0.8em;
 }
 
 .header > .header-desc {
@@ -151,8 +151,6 @@ footer > div.footer-actions > ul > li > button:active {
 
 .sidenav > ul > li {
   height: 100%;
-  display: flex;
-  align-items: center;
 }
 
 .sidenav > ul > li > a {
@@ -179,20 +177,21 @@ footer > div.footer-actions > ul > li > button:active {
 .songs-list > table {
   font-size: 1vw;
   width: 100%;
-  padding: 0.25vw;
+  padding: 0.2vw;
   table-layout: fixed;
 }
 
 .songs-list > table > tbody > tr {
   color: black;
-  line-height: 5vh;
+  line-height: 4vh;
 }
 
 .songs-list > table > tbody > tr > td > button {
   background-color: transparent;
   color: blue;
-  font-size: 1vw;
+  font-size: 0.8vw;
   text-transform: uppercase;
+  border: 0.2vh solid black;
 }
 
 .songs-list > table > tbody > tr:nth-child(even) {
