@@ -83,7 +83,7 @@ footer > div.footer-actions > ul > li > button:active {
   flex-direction: row;
 }
 
-.header > img {
+.header > div > img {
   height: calc(25vh - 1.6em);
   padding: 0.8em;
 }
