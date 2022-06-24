@@ -123,6 +123,128 @@
           <a href="#">Lorem Ipsum</a>
         </article>
       </article>
+      <div>
+        <form action="#" autocomplete="on" method="post">
+          <fieldset>
+            <legend>Sign up:</legend>
+            <div>
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required />
+            </div>
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div>
+              <p>Please select your Gender:</p>
+              <div>
+                <input
+                  type="radio"
+                  id="gender"
+                  name="gender"
+                  value="male"
+                  checked
+                />
+                <label for="gender">Male</label>
+              </div>
+              <div>
+                <input type="radio" id="gender2" name="gender" value="female" />
+                <label for="gender2">Female</label>
+              </div>
+            </div>
+            <div>
+              <div>
+                <p>Your Interests</p>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkbox1"
+                    name="HTML"
+                    value="html"
+                    required
+                    checked
+                  />
+                  <label for="checkbox1">HTML</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkbox2"
+                    name="CSS"
+                    value="css"
+                    required
+                  />
+                  <label for="checkbox2">CSS</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkbox3"
+                    name="JS"
+                    value="js"
+                    required
+                  />
+                  <label for="checkbox3">JS</label>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label for="textarea">About you:</label>
+              <textarea
+                type="textarea"
+                id="textarea"
+                name="about"
+                rows="4"
+                cols="50"
+              >
+some info about you here...</textarea
+              >
+            </div>
+            <div>
+              <label for="profession">Choose your profession:</label>
+              <select name="profession" id="profession">
+                <optgroup label="Technical">
+                  <option value="IT Engineer">IT Engineer</option>
+                </optgroup>
+                <optgroup label="Non-Technical">
+                  <option value="Business">Business</option>
+                  <option value="Infrastructure">Infrastructure</option>
+                </optgroup>
+                <optgroup label="Other">
+                  <option value="Student">Student</option>
+                </optgroup>
+              </select>
+            </div>
+            <div>
+              <label for="bio">Upload your bio:</label>
+              <input type="file" id="bio" name="bio" />
+            </div>
+            <div>
+              <label for="rate">Rate yourself for JS:</label>
+              <input
+                type="range"
+                id="a"
+                value="60"
+                step="10"
+                list="tickmarks"
+              />
+              <datalist id="tickmarks">
+                <option value="0" label="0%"></option>
+                <option value="25" label="25%"></option>
+                <option value="50" label="50%"></option>
+                <option value="100" label="100%"></option>
+              </datalist>
+            </div>
+            <div>
+              <input type="submit" value="Submit" />
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </div>
     <footer>
       <p>Author: Tushar Walzade</p>
