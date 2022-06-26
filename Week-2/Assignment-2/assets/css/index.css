@@ -7,9 +7,9 @@ body {
 }
 
 .main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
     position: relative;
     width: 200px;
     height: 200px;
@@ -37,44 +37,38 @@ body {
     right: 0;
 }
 
-.tl {
-    background-color: orange;
+.transition {
     transition: transform 1s ease-in-out;
 }
 
-.tl:hover {
+.tl {
+    background-color: orange;
+}
+
+.main:hover .tl {
     transform: translateX(-100%) rotate(90deg);
 }
 
 .tr {
     background-color: yellow;
-    transition: transform 1s ease-in-out;
 }
 
-.tr:hover {
+.main:hover .tr {
     transform: translateX(100%) rotate(-90deg);
 }
 
 .bl {
     background-color: blue;
-    transition: transform 1s ease-in-out;
 }
 
-.bl:hover {
+.main:hover .bl {
     transform: translateX(-100%) rotate(-90deg);
 }
 
 .br {
     background-color: green;
-    transition: transform 1s ease-in-out;
 }
 
-.br:hover {
+.main:hover .br {
     transform: translateX(100%) rotate(90deg);
-}
-
-@keyframes goleft {
-    to {
-        transform: rotate(180deg);
-    }
 }
