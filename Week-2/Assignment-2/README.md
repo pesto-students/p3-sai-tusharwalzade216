@@ -6,7 +6,7 @@
 
 - Create a new `.html` page and link a `.css` file to it.
 - Using CSS only, achieve the above animation.
-- No frameworks or libraries to be used.- **Commit often (with good meaningful commit messages), and Push to Github regularly.**
+- No frameworks or libraries to be used.
 
 ## Guidelines:
 
