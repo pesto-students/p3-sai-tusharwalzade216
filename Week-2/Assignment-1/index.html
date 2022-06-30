@@ -123,139 +123,139 @@
           <a href="#">Lorem Ipsum</a>
         </article>
       </article>
-      <div>
-        <form action="#" autocomplete="on" method="post">
-          <fieldset class="form-wrapper">
-            <legend>Sign up:</legend>
-            <div class="input">
-              <label for="username">Username:</label>
-              <input type="text" id="username" name="username" required />
-            </div>
-            <div class="input">
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="input">
-              <label for="password">Password:</label>
-              <input type="password" id="password" name="password" required />
-            </div>
-            <div class="input">
-              <label for="number">Number of remote work days interested:</label>
-              <input
-                type="number"
-                id="number"
-                name="number"
-                min="3"
-                max="5"
-                required
-              />
-            </div>
-            <div class="input">
-              <fieldset>
-                <legend>Please select your Gender:</legend>
-                <div class="input-row">
-                  <input
-                    type="radio"
-                    id="gender"
-                    name="gender"
-                    value="male"
-                    checked
-                  />
-                  <label for="gender">Male</label>
-                </div>
-                <div class="input-row">
-                  <input
-                    type="radio"
-                    id="gender2"
-                    name="gender"
-                    value="female"
-                  />
-                  <label for="gender2">Female</label>
-                </div>
-              </fieldset>
-            </div>
-            <div class="input">
-              <fieldset>
-                <legend>Your Interests:</legend>
-                <div class="input-row">
-                  <input
-                    type="checkbox"
-                    id="checkbox1"
-                    name="HTML"
-                    value="html"
-                    required
-                    checked
-                  />
-                  <label for="checkbox1">HTML</label>
-                </div>
-                <div class="input-row">
-                  <input
-                    type="checkbox"
-                    id="checkbox2"
-                    name="CSS"
-                    value="css"
-                    required
-                  />
-                  <label for="checkbox2">CSS</label>
-                </div>
-                <div class="input-row">
-                  <input
-                    type="checkbox"
-                    id="checkbox3"
-                    name="JS"
-                    value="js"
-                    required
-                  />
-                  <label for="checkbox3">JS</label>
-                </div>
-              </fieldset>
-            </div>
-            <div class="input about-you">
-              <label for="textarea">About you:</label>
-              <textarea type="textarea" id="textarea" name="about" rows="4">
+      <form action="#" autocomplete="on" method="post">
+        <fieldset class="form-wrapper">
+          <legend>Sign up:</legend>
+          <div class="input">
+            <label for="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              pattern="^[a-z0-9]{3,15}$"
+              title="Username may only contain letters and numbers"
+            />
+          </div>
+          <div class="input">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="input">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              pattern="^(?=.*[a-z0-9])(?=.*[A-Z0-9])(?=.*\d)[a-zA-Z0-9\d]{8,25}$"
+              title="Password should be 8-25 characters long"
+            />
+          </div>
+          <div class="input">
+            <label for="number">Number of remote work days interested:</label>
+            <input
+              class="range-input"
+              type="number"
+              id="number"
+              name="number"
+              min="3"
+              max="5"
+              value="4"
+              required
+            />
+          </div>
+          <div class="input">
+            <fieldset>
+              <legend>Please select your Gender:</legend>
+              <div class="input-row">
+                <input
+                  type="radio"
+                  id="gender"
+                  name="gender"
+                  value="male"
+                  checked
+                />
+                <label for="gender">Male</label>
+              </div>
+              <div class="input-row">
+                <input type="radio" id="gender2" name="gender" value="female" />
+                <label for="gender2">Female</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="input">
+            <fieldset>
+              <legend>Your Interests:</legend>
+              <div class="input-row">
+                <input
+                  type="checkbox"
+                  id="checkbox1"
+                  name="HTML"
+                  value="html"
+                  checked
+                />
+                <label for="checkbox1">HTML</label>
+              </div>
+              <div class="input-row">
+                <input
+                  type="checkbox"
+                  id="checkbox2"
+                  name="CSS"
+                  value="css"
+                />
+                <label for="checkbox2">CSS</label>
+              </div>
+              <div class="input-row">
+                <input
+                  type="checkbox"
+                  id="checkbox3"
+                  name="JS"
+                  value="js"
+                />
+                <label for="checkbox3">JS</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="input about-you">
+            <label for="textarea">About you:</label>
+            <textarea type="textarea" id="textarea" name="about" rows="4">
 some info about you here...</textarea
-              >
-            </div>
-            <div class="input">
-              <label for="profession">Choose your profession:</label>
-              <select name="profession" id="profession">
-                <optgroup label="Technical">
-                  <option value="IT Engineer">IT Engineer</option>
-                </optgroup>
-                <optgroup label="Non-Technical">
-                  <option value="Business">Business</option>
-                  <option value="Infrastructure">Infrastructure</option>
-                </optgroup>
-                <optgroup label="Other">
-                  <option value="Student">Student</option>
-                </optgroup>
-              </select>
-            </div>
-            <div class="input upload-bio">
-              <label for="bio">Upload your bio:</label>
-              <input type="file" id="bio" name="bio" />
-            </div>
-            <div class="input">
-              <label for="rate">Rate yourself for Communication:</label>
-              <input
-                type="range"
-                id="a"
-                value="60"
-                step="10"
-                list="tickmarks"
-              />
-              <datalist id="tickmarks">
-                <option value="0" label="0%"></option>
-                <option value="50" label="50%"></option>
-                <option value="100" label="100%"></option>
-              </datalist>
-            </div>
-            <div class="submit-btn">
-              <input type="submit" value="Submit" />
-            </div>
-          </fieldset>
-        </form>
-      </div>
+            >
+          </div>
+          <div class="input">
+            <label for="profession">Choose your profession:</label>
+            <select name="profession" id="profession">
+              <optgroup label="Technical">
+                <option value="IT Engineer">IT Engineer</option>
+              </optgroup>
+              <optgroup label="Non-Technical">
+                <option value="Business">Business</option>
+                <option value="Infrastructure">Infrastructure</option>
+              </optgroup>
+              <optgroup label="Other">
+                <option value="Student">Student</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="input upload-bio">
+            <label for="bio">Upload your bio:</label>
+            <input type="file" id="bio" name="bio" />
+          </div>
+          <div class="input">
+            <label for="rate">Rate yourself for Communication:</label>
+            <input type="range" id="a" value="60" step="10" list="tickmarks" />
+            <datalist id="tickmarks">
+              <option value="0" label="0%"></option>
+              <option value="50" label="50%"></option>
+              <option value="100" label="100%"></option>
+            </datalist>
+          </div>
+          <div class="submit-btn">
+            <input type="submit" value="Submit" />
+          </div>
+        </fieldset>
+      </form>
     </div>
     <footer>
       <p>Author: Tushar Walzade</p>
