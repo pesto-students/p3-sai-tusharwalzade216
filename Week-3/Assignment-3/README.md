@@ -37,7 +37,31 @@ log();
 2. The candidates will understand how 'encapsulation' works in JS.
 
 ## Output Justification
+
 ### Output: <output>Count is 0</output>
 
 ### Why?
+
 The count is getting incremented, but nowhere we've updated the message; the message variable just captured the initial value of count when registering a function in memory
+
+## Execution steps
+
+- The function `createIncrement` starts registering in memory
+
+- The variable `count` is assigned to `0`
+
+- The function `increment` registers in memory, here this function forms a **Closure** with it's nearest scope variable `count`.
+
+- The variable `message` is set to `Count is 0` given that count is already assigned to 0
+
+- The function `log` registers in memory
+
+- The `return` statement then gets registered in memory
+
+- The function `createIncrement` ends registering in memory; by then we can also note that all the functions inside `createIncrement` can access the variables inside it, so it forms a binding across them - this process is called **Encapsulation**.
+
+- `const [increment, log] = createIncrement();` calls `createIncrement` function and takes copies of the child functions out of it.
+
+- `increment()` is being called 3 times, makes count 3 eventually.
+
+- `log()` will now result in <output>Count is 0</output>
