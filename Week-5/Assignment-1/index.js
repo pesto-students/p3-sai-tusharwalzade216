@@ -37,7 +37,7 @@ const aw = async () => {
     }
 };
 
-/* aw(); */
+aw();
 
 /** Sample Output:
  * task 1
