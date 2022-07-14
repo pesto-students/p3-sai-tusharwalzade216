@@ -2,7 +2,7 @@
 
 [Welcome to Pesto assignment - 1 from the Week 5](https://pestotech.teachable.com/courses/1782350/lectures/40231574)
 
-Using Async/Await and Generators, create separate functions and achieve the samefunctionality.(3hours)
+Using Async/Await and Generators, create separate functions and achieve the same functionality. (3hours)
 
 Execute 3 callback functions asynchronously, for example doTask1(), doTask2() and doTask3().
 
