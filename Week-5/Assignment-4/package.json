@@ -1,0 +1,27 @@
+{
+  "name": "assignment-5.4",
+  "version": "1.0.0",
+  "description": "This assignment includes some basic examples of writing test cases using Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pesto-students/p3-sai-tusharwalzade216.git"
+  },
+  "keywords": [
+    "jest",
+    "testing",
+    "javascript"
+  ],
+  "author": "tusharwalzade216@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pesto-students/p3-sai-tusharwalzade216/issues"
+  },
+  "homepage": "https://github.com/pesto-students/p3-sai-tusharwalzade216#readme",
+  "dependencies": {
+    "jest": "^28.1.3"
+  }
+}
