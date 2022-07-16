@@ -28,7 +28,7 @@ function timeLog(fn) {
  * @returns - a sum of all the inputs
  */
 function add(...args) {
-    return args.reduce((prevArg, currArg) => Number(prevArg) + Number(currArg), 0);
+    return args.reduce((sumOfPrevArgs, currArg) => Number(sumOfPrevArgs) + Number(currArg), 0);
 }
 
 /**
