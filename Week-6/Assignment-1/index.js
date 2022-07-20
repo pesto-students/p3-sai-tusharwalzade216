@@ -2,6 +2,7 @@ const Utils = require('./utils');
 
 /**
  * @function maxSumContiguousArr
+ * @summary Time Complexity: O(n), Space Complexity: O(1)
  * @param {Array} arr 
  * @returns maximum sum of contiguous elements calculated
  */
@@ -26,6 +27,7 @@ const maxSumContiguousArr = (arr) => {
 
 /**
  * @function maxSumContiguousArrWithKadane
+ * @summary Time Complexity: O(n), Space Complexity: O(1)
  * @param {Array} arr 
  * @returns maximum sum of contiguous elements calculated using Kaden's algorithm
  */
