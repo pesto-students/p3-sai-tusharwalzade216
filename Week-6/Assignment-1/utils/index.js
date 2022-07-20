@@ -9,7 +9,7 @@ const getMax = (a, b) => a > b ? a : b;
 /**
  * @function _every
  * @param {function} cb a callback function to be executed 
- * @returns maximum sum of contiguous elements calculated
+ * @returns boolean by checking if the result meets the callback expectation
  */
 Array.prototype._every = function (cb) {
     const arrLen = this.length;
@@ -22,7 +22,7 @@ Array.prototype._every = function (cb) {
 /**
  * @function isArrayOfNumbers
  * @param {Array} arr an array of elements 
- * @returns maximum sum of contiguous elements calculated
+ * @returns boolean by checking if input is Array of Integers
  */
 const isArrayOfNumbers = (arr) => Array.isArray(arr) && arr._every(el => Number.isInteger(el));
 
