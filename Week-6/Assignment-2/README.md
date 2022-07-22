@@ -6,7 +6,7 @@
 
 ### Problem Description:
 
-Given a matrix of m \* n elements (m rows, n columns), return all elements of the matrix in spiral order.
+Given a matrix of m * n elements (m rows, n columns), return all elements of the matrix in spiral order.
 
 ### Example:
 Given the following matrix:
