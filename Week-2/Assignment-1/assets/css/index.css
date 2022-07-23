@@ -1,0 +1,153 @@
+html {
+    font-family: system-ui;
+    font-size: 100%;
+}
+
+#main {
+    margin-bottom: 4rem;
+}
+
+#main > header {
+    text-align: center;
+}
+
+.articles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.articles > article {
+    flex-basis: 48%;
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+article a {
+    text-align: end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.input {
+    display: flex;
+    flex: 0 0 48%;
+    flex-direction: column;
+    margin: 0.4rem auto;
+}
+
+.input > label {
+    margin: 0.2rem 0;
+}
+
+input:not([type="file"]) {
+    border: 1.6px solid #eee;
+    border-radius: 4px;
+}
+
+input:not([type="file"]):valid,
+.range-input:in-range {  
+  border-color: green;
+}
+input:not([type="file"]):invalid,
+.range-input:out-of-range {
+  border-color: red;  
+}
+
+.input-row {
+    flex-direction: row;
+    align-items: center;
+}
+
+.submit-btn {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    flex-basis: 100%;
+    order: 3;
+}
+
+.submit-btn > input[type=submit] {
+    padding: 0.4rem 4rem;
+    background-color: steelblue;
+    color: whitesmoke;
+    border-color: transparent;
+    border-radius: 2rem;
+}
+
+.submit-btn > input[type=submit]:hover {
+    background-color: whitesmoke;
+    color: steelblue;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+}
+
+.about-you {
+    order: 1;
+}
+
+.upload-bio {
+    order: 2;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background: steelblue;
+    height: 3.2rem;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+footer > * {
+    font-size: 1rem;
+    padding: 0 1.2rem;
+    margin: 0;
+}
+
+footer > p {
+    color: whitesmoke;
+}
+
+@media screen and (max-width: 600px) {
+    .articles > article {
+        flex-basis: 100%;
+    }
+
+    .input {
+        flex: 0 0 100%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    footer > p {
+        border-right: 0.2rem solid;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .articles > article {
+        flex-basis: 30%;
+    }
+
+    .input {
+        flex: 0 0 30%;
+    }
+}

@@ -1,0 +1,74 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.child {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+}
+
+.top {
+    top: 0;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.transition {
+    transition: transform 1s ease-in-out;
+}
+
+.tl {
+    background-color: orange;
+}
+
+.main:hover .tl {
+    transform: translateX(-100%) rotate(90deg);
+}
+
+.tr {
+    background-color: yellow;
+}
+
+.main:hover .tr {
+    transform: translateX(100%) rotate(-90deg);
+}
+
+.bl {
+    background-color: blue;
+}
+
+.main:hover .bl {
+    transform: translateX(-100%) rotate(-90deg);
+}
+
+.br {
+    background-color: green;
+}
+
+.main:hover .br {
+    transform: translateX(100%) rotate(90deg);
+}
