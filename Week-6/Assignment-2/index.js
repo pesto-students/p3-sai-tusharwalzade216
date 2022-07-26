@@ -69,11 +69,7 @@ try {
      */
     console.log(spirallyTraverse(mat33));
     //  [1, 2, 3, 6, 9, 8, 7, 4, 5]
-} catch (error) {
-    console.error(error)
-}
-
-try {
+    
     const mat44 = generateMatrix(4, 4);
     console.log(displayMatrix(mat44));
     /**
@@ -85,11 +81,7 @@ try {
      */
     console.log(spirallyTraverse(mat44));
     //  [1, 2, 3, 4, 8, 12, 16, 15, 14, 13, 9, 5, 6, 7, 11, 10]
-} catch (error) {
-    console.error(error);
-}
-
-try {
+    
     const mat99 = generateMatrix(9, 9);
     console.log(displayMatrix(mat99));
     /**
@@ -111,28 +103,14 @@ try {
      * 69, 68, 67, 66, 65, 56, 47, 38, 29, 20, 21, 22, 23, 24, 25, 34, 43, 52, 61, 60, 59, 58, 
      * 57, 48, 39, 30, 31, 32, 33, 42, 51, 50, 49, 40, 41]
      */
-} catch (error) {
-    console.error(error);
-}
 
-try {
     const mat11 = generateMatrix(1, 1);
-    console.log(displayMatrix(mat11));
-    /**
-     * Sample Output
-     * "1"
-     */
-    console.log(spirallyTraverse(mat11));
-    //  [1]
-} catch (error) {
-    console.error(error);
-}
+    console.log(displayMatrix(mat11));      //  "1"
+    console.log(spirallyTraverse(mat11));   //  [1]
 
-try {
     const mat00 = generateMatrix(0, 0);
-    console.log(displayMatrix(mat00));
-    console.log(spirallyTraverse(mat00));
-    //  Error: Invalid input provided
+    console.log(displayMatrix(mat00));      //  ""
+    console.log(spirallyTraverse(mat00));   //  Error: Invalid input provided
 } catch (error) {
-    console.error(error);
+    console.error(error)
 }
