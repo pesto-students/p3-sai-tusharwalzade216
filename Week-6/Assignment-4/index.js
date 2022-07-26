@@ -23,7 +23,7 @@ const validateInput = (arr) => Array.isArray(arr) && arr.length > 1 && arr.lengt
  */
 const stockExchange = (arr) => {
     if (!validateInput(arr)) throw new Error('Invalid input provided');
-    
+
     const arrLen = arr.length;
     let minIndex = 0, maxIndex = 0;
 
@@ -43,19 +43,23 @@ const stockExchange = (arr) => {
     }
 };
 
-console.log({ prices: prices, profit: stockExchange(prices) });
-//  { prices: [ 7, 1, 5, 3, 6, 4 ], profit: 5 }
-console.log({ prices: prices2, profit: stockExchange(prices2) });
-//  { prices: [ 7, 6, 4, 3, 1 ], profit: 0 }   
-console.log({ prices: prices3, profit: stockExchange(prices3) });
-//  { prices: [ 0, 0, 0, 0, 0 ], profit: 0 }   
-console.log({ prices: prices4, profit: stockExchange(prices4) });
-//  { prices: [ 1, 2, 3, 4, 5, 6 ], profit: 5 }
-console.log({ prices: prices5, profit: stockExchange(prices5) });
-//  { prices: [ 8, 0, 2, 1, 3, 3 ], profit: 3 }
-console.log({ prices: prices6, profit: stockExchange(prices6) });
-//  { prices: [ 8, 0, 2, 0, 3, 9 ], profit: 9 }
-console.log({ prices: prices7, profit: stockExchange(prices7) });
-//  { prices: [ 8, 0, 2, 0, 3, 9, 10, 50, 104 ], profit: 104 }
-console.log({ prices: prices8, profit: stockExchange(prices8) });
-//  Error: Invalid input provided
+try {
+    console.log({ prices: prices, profit: stockExchange(prices) });
+    //  { prices: [ 7, 1, 5, 3, 6, 4 ], profit: 5 }
+    console.log({ prices: prices2, profit: stockExchange(prices2) });
+    //  { prices: [ 7, 6, 4, 3, 1 ], profit: 0 }   
+    console.log({ prices: prices3, profit: stockExchange(prices3) });
+    //  { prices: [ 0, 0, 0, 0, 0 ], profit: 0 }   
+    console.log({ prices: prices4, profit: stockExchange(prices4) });
+    //  { prices: [ 1, 2, 3, 4, 5, 6 ], profit: 5 }
+    console.log({ prices: prices5, profit: stockExchange(prices5) });
+    //  { prices: [ 8, 0, 2, 1, 3, 3 ], profit: 3 }
+    console.log({ prices: prices6, profit: stockExchange(prices6) });
+    //  { prices: [ 8, 0, 2, 0, 3, 9 ], profit: 9 }
+    console.log({ prices: prices7, profit: stockExchange(prices7) });
+    //  { prices: [ 8, 0, 2, 0, 3, 9, 10, 50, 104 ], profit: 104 }
+    console.log({ prices: prices8, profit: stockExchange(prices8) });
+    //  Error: Invalid input provided
+} catch (error) {
+    console.warn(error);
+}
