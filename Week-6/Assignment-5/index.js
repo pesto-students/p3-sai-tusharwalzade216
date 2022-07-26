@@ -35,13 +35,17 @@ const pairWithDiff = (arr, diff) => {
     return 0;
 }
 
-console.log({ A1, B1, res: pairWithDiff(A1, B1) });
-//  { A1: [ 5, 10, 3, 2, 50, 80 ], B1: 78, res: 1 }
-console.log({ A2, B2, res: pairWithDiff(A2, B2) });
-//  { A2: [ -10, 20 ], B2: 30, res: 1 }
-console.log({ A3, B3, res: pairWithDiff(A3, B3) });
-//  { A3: [8, 0, 2, 0, 3, 9, 10, 50, 103], B3: 103, res: 1 }
-console.log({ A4, B4, res: pairWithDiff(A4, B4) });
-//  Error: Invalid input provided
-console.log({ A5, B5, res: pairWithDiff(A5, B5) });
-//  Error: Invalid input provided
+try {
+    console.log({ A1, B1, res: pairWithDiff(A1, B1) });
+    //  { A1: [ 5, 10, 3, 2, 50, 80 ], B1: 78, res: 1 }
+    console.log({ A2, B2, res: pairWithDiff(A2, B2) });
+    //  { A2: [ -10, 20 ], B2: 30, res: 1 }
+    console.log({ A3, B3, res: pairWithDiff(A3, B3) });
+    //  { A3: [8, 0, 2, 0, 3, 9, 10, 50, 103], B3: 103, res: 1 }
+    console.log({ A4, B4, res: pairWithDiff(A4, B4) });
+    //  Error: Invalid input provided
+    console.log({ A5, B5, res: pairWithDiff(A5, B5) });
+    //  Error: Invalid input provided
+} catch (error) {
+    console.warn(error);
+}
