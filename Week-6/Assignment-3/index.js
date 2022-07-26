@@ -1,5 +1,6 @@
 const arr = [0, 2, 1, 1, 0, 1, 2, 1];
 const arr2 = [0, 2, 1, 0, 1, 0, 1, 2, 1, 2, 2, 1, 0, 1, 2, 1];
+const arr3 = [0, 1, 2, 3, 4];
 
 /**
  * @function validateInput validates if the provided input is an array & has all 0s, 1s & 2s
@@ -30,25 +31,31 @@ const sortArr = (arr) => {
     return a0.concat(a1).concat(a2);
 };
 
-console.log({ sortArr: sortArr(arr) });
-/**
- * {
- *   sortArr: [
- *     0, 0, 1, 1,
- *     1, 1, 2, 2
- *   ]
- * }
- */
-console.log({ sortArr: sortArr(arr2) });
-/**
- * {
- *  sortArr: [
- *    0, 0, 0, 0, 1, 1,
- *    1, 1, 1, 1, 1, 2,
- *    2, 2, 2, 2
- *  ]
- *}
- */
+try {
+    console.log({ sortArr: sortArr(arr) });
+    /**
+     * {
+     *   sortArr: [
+     *     0, 0, 1, 1,
+     *     1, 1, 2, 2
+     *   ]
+     * }
+     */
+    console.log({ sortArr: sortArr(arr2) });
+    /**
+     * {
+     *  sortArr: [
+     *    0, 0, 0, 0, 1, 1,
+     *    1, 1, 1, 1, 1, 2,
+     *    2, 2, 2, 2
+     *  ]
+     *}
+     */
+    console.log({ sortArr: sortArr(arr3) });
+    // Error: Invalid input provided, expected an array of 0s, 1s, 2s
+} catch (error) {
+    console.warn(error);
+}
 
 /**
  * @function sortArrByCnt a function which sorts array of 0s, 1s & 2s
@@ -88,22 +95,28 @@ const sortArrByCnt = (arr) => {
     return arr;
 };
 
-console.log({ sortArrByCnt: sortArrByCnt(arr) });
-/**
- * {
- *   sortArrByCnt: [
- *     0, 0, 1, 1,
- *     1, 1, 2, 2
- *   ]
- * }
- */
-console.log({ sortArrByCnt: sortArrByCnt(arr2) });
-/**
- * {
- *  sortArrByCnt: [
- *    0, 0, 0, 0, 1, 1,
- *    1, 1, 1, 1, 1, 2,
- *    2, 2, 2, 2
- *  ]
- *}
- */
+try {
+    console.log({ sortArrByCnt: sortArrByCnt(arr) });
+    /**
+     * {
+     *   sortArrByCnt: [
+     *     0, 0, 1, 1,
+     *     1, 1, 2, 2
+     *   ]
+     * }
+     */
+    console.log({ sortArrByCnt: sortArrByCnt(arr2) });
+    /**
+     * {
+     *  sortArrByCnt: [
+     *    0, 0, 0, 0, 1, 1,
+     *    1, 1, 1, 1, 1, 2,
+     *    2, 2, 2, 2
+     *  ]
+     *}
+     */
+    console.log({ sortArrByCnt: sortArrByCnt(arr3) });
+    // Error: Invalid input provided, expected an array of 0s, 1s, 2s
+} catch (error) {
+    console.warn(error);
+}
