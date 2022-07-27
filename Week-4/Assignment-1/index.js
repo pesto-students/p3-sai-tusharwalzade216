@@ -58,7 +58,6 @@ class TusharPromise {
                 _value = p(_value);
             });
         } catch (error) {
-            this.promiseChain = [];
             this.reject(error);
         } finally {
             this.promiseChain = [];
