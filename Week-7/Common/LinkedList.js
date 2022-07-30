@@ -15,6 +15,7 @@ function LinkedList() {
     this.head = null;
     this.tail = null;
     this.size = 0;
+    this.maxSize = 104;
 }
 
 /**
@@ -84,6 +85,8 @@ LinkedList.prototype.setNode = function (index, value) {
  * @returns a list with new value
  */
 LinkedList.prototype.push = function (value) {
+    if (this.size === this.maxSize) throw new Error("List overflow");
+
     const node = new Node(value, null);
     if (this.isEmpty) {
         this.head = this.tail = node;
@@ -127,6 +130,8 @@ LinkedList.prototype.pop = function () {
  * @returns a list with new node
  */
 LinkedList.prototype.unshift = function (value) {
+    if (this.size === this.maxSize) throw new Error("List overflow");
+
     const node = new Node(value, null);
     if (this.isEmpty) {
         this.head = this.tail = node;
@@ -161,6 +166,7 @@ LinkedList.prototype.shift = function () {
  * @returns true if the value is inserted, otherwise false
  */
 LinkedList.prototype.insert = function (index, value) {
+    if (this.size === this.maxSize) throw new Error("List overflow");
     if (!Number.isInteger(index)) throw new Error("Invalid index");
     if (index > this.size || index < 0) throw new Error("index out of reach");
 
