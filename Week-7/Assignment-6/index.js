@@ -7,6 +7,9 @@ function Queue() {
 
     // Time Complexity - O(n), Ω(1), Space Complexity - O(1)
     this.enqueue = function (value) {
+        if (s1.length > 100) throw new Error("Stack overflow!");
+        if (value < 1 || value > 100) throw new Error("Value out of bounds!");
+        
         if (s2.length > 0) {
             let len = s2.length;
             for (let i = 0; i < len; i++) {
