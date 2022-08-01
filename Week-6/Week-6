@@ -1,1 +1,17 @@
+## Week 6
 
+### Assignment Introduction
+- Calculate the time and space complexity for the set of questions
+- A set of Problem statement based on array that would help student how to iterate and process an array
+
+### Benchmarks
+- All the problem should have an optimize solutions
+- All the problem statement should have the time and space complexity mention in the code comment
+- The code should be readable and must follow good coding practice.
+- Keep the code as modular as you can.
+
+### Learning Outcomes
+- Student will have a good grip on calculating time and space complexity of given loop or program
+- Students will learn how to iterate and process array
+- Students will learn how to use Two pointer and Kadane Algorithm to optimize code.
+- Students will be able to solve easy to medium level array problem
