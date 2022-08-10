@@ -28,13 +28,7 @@ const getClosestSum = (arr, target) => {
     let closestSum = Infinity;
 
     // sorting the array first to have better time complexity
-    for (let i = 0; i < arrLen; i++) {
-        for (let j = 0; j < arrLen; j++) {
-            if (arr[j] > arr[j + 1]) {
-                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-            }
-        }
-    }
+    arr = arr.sort((a, b) => a - b);
 
     // go upto start of the last triplet, i.e. 3rd last value
     for (let i = 0; i < arrLen - 2; i++) {
