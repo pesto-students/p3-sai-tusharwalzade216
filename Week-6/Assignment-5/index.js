@@ -15,7 +15,7 @@ const validateInput = (arr, diff) => Array.isArray(arr) && arr.length > 1 && arr
 
 /**
  * @function pairWithDiff finds a pair with a given difference if available
- * @summary Time Complexity - O(n^2), Space Complexity - O(1)
+ * @summary Time Complexity - O(n), Space Complexity - O(1)
  * @param {Array} arr an input array
  * @param {Number} diff a difference to find a pair with
  * @returns 1 or 0 based on if a pair with given difference is found
@@ -23,11 +23,12 @@ const validateInput = (arr, diff) => Array.isArray(arr) && arr.length > 1 && arr
 const pairWithDiff = (arr, diff) => {
     if (!validateInput(arr, diff)) throw new Error('Invalid input provided');
 
+    arr = arr.sort((a, b) => a - b);
     const arrLen = arr.length;
 
     for (let i = 0; i < arrLen; i++) {
-        for (let j = 0; j < arrLen; j++) {
-            if (i !== j && Math.abs(arr[i] - arr[j]) === diff) {
+        for (let j = i; j < arrLen; j++) {
+            if (Math.abs(arr[i] - arr[j]) === diff) {
                 return 1;
             }
         }
