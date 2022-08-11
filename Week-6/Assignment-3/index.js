@@ -12,7 +12,7 @@ const validateInput = (arr) => Array.isArray(arr) &&
 
 /**
  * @function sortArr a function which sorts array of 0s, 1s & 2s
- * @summary Time Compexity - O(n), Space Complexity - O(1)
+ * @summary Time Compexity - O(n), Space Complexity - O(n)
  * @param {Array} arr input array with 0s, 1s & 2s
  * @returns a sorted array
  */
