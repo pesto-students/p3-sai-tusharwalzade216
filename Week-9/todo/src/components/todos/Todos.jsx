@@ -1,9 +1,10 @@
 import React from "react";
-import { TodosContainer } from "../../common/Wrappers";
+
+import AddTodo from "./components/addTodo";
 import Error from "../error/Error";
 import Todo from "./components/todo";
+import { TodosContainer } from "../../common/Wrappers";
 import StorageService from "../../common/storageService";
-import AddTodo from "./components/addTodo";
 
 class Todos extends React.Component {
     constructor(props) {
@@ -68,10 +69,7 @@ class Todos extends React.Component {
         });
     }
 
-    setTodo(e) {
-        this.setState({ newTodo: e });
-        if (!e) this.setState({ errorMsg: '' });
-    }
+    setTodo = (e) => this.setState({ ...(!e && { errorMsg: '' }), newTodo: e });
 
     render() {
         const { errorMsg, newTodo, todos } = this.state;
@@ -80,22 +78,24 @@ class Todos extends React.Component {
             <>
                 <AddTodo
                     errorMsg={errorMsg}
+                    handleAddTodo={this.handleAddTodo}
                     newTodo={newTodo}
-                    setTodo={this.setTodo}
-                    handleAddTodo={this.handleAddTodo} />
+                    setTodo={this.setTodo} />
 
                 <TodosContainer>
                     {todos.length ? todos.map((todo) => (
                         <Todo
-                            key={todo.id}
-                            todo={todo}
                             completeTodo={this.handleCompleteTodo}
-                            deleteTodo={this.handleDeleteTodo} />
+                            deleteTodo={this.handleDeleteTodo}
+                            key={todo.id}
+                            todo={todo} />
                     )) : <Error />}
                 </TodosContainer>
             </>
         );
     }
 }
+
+Todos.propTypes = {};
 
 export default Todos;

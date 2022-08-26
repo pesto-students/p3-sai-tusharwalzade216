@@ -1,11 +1,64 @@
 import styled, { css } from "styled-components";
 
-const TodosContainer = styled.ul`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: inherit;
+const AddTodoContainer = styled.form`
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem;
+
+    & input {
+        font-size: inherit;
+        height: 1.6rem;
+        width: 32rem;
+        margin-right: 2rem;
+        border-radius: 0.4rem;
+
+        @media (max-width: 768px) {
+            max-width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    & > button {
+        align-self: flex-start;
+        background: royalblue;
+        color: whitesmoke;
+        border: none;
+        font-size: 1rem;
+        border-radius: 0.4rem;
+        padding: 0.4rem 2rem;
+
+        &:hover {
+            background: darkslateblue;
+        }
+    }
+
+    & > div {
+        max-width: 100%;
+
+        @media (max-width: 768px) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    ${props => props.hasError && css`
+        & input, & input:invalid {
+            border: solid darkred;
+        }
+    `}
+`;
+
+const ErrorWrapper = styled.h5`
+    color: darkred;
+    text-align: start;
+    margin: auto;
+`;
+
+const Title = styled.h4`
+    flex-grow: 1;
+    font-size: 1.2rem;
+    font-weight: 400;
+    word-break: break-all;
 `;
 
 const TodoContainer = styled.li`
@@ -72,71 +125,18 @@ const TodoContainer = styled.li`
     }
 `;
 
-const Title = styled.h4`
-    flex-grow: 1;
-    font-size: 1.2rem;
-    font-weight: 400;
-    word-break: break-all;
-`;
-
-const AddTodoContainer = styled.form`
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 2rem;
-
-    & input {
-        font-size: inherit;
-        height: 1.6rem;
-        width: 32rem;
-        margin-right: 2rem;
-        border-radius: 0.4rem;
-
-        @media (max-width: 768px) {
-            max-width: 100%;
-            margin-right: 0;
-        }
-    }
-
-    & > button {
-        align-self: flex-start;
-        background: royalblue;
-        color: whitesmoke;
-        border: none;
-        font-size: 1rem;
-        border-radius: 0.4rem;
-        padding: 0.4rem 2rem;
-
-        &:hover {
-            background: darkslateblue;
-        }
-    }
-
-    & > div {
-        max-width: 100%;
-
-        @media (max-width: 768px) {
-            margin-bottom: 2rem;
-        }
-    }
-
-    ${props => props.hasError && css`
-        & input, & input:invalid {
-            border: solid darkred;
-        }
-    `}
-`;
-
-const ErrorWrapper = styled.h5`
-    color: darkred;
-    text-align: start;
-    margin: auto;
+const TodosContainer = styled.ul`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: inherit;
 `;
 
 export {
     AddTodoContainer,
     ErrorWrapper,
-    TodosContainer,
+    Title,
     TodoContainer,
-    Title
+    TodosContainer,
 };
