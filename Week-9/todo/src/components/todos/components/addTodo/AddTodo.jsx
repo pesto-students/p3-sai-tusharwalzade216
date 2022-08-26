@@ -1,20 +1,36 @@
+import PropTypes from "prop-types";
+
 import { AddTodoContainer, ErrorWrapper } from "../../../../common";
 
-const AddTodo = ({ newTodo, setTodo, handleAddTodo, errorMsg = '' }) => {
+const AddTodo = ({ errorMsg, handleAddTodo, newTodo, setTodo }) => {
     return (
-        <AddTodoContainer onSubmit={handleAddTodo} hasError={!!errorMsg}>
+        <AddTodoContainer hasError={!!errorMsg} onSubmit={handleAddTodo}>
             <div>
-                <input autoFocus type="text" value={newTodo}
+                <input
+                    autoFocus
+                    minLength={10}
+                    maxLength={100}
                     onChange={(e) => setTodo(e?.target?.value)}
                     placeholder="Type in to add a todo..."
                     required
-                    minLength={10}
-                    maxLength={100} />
+                    type="text"
+                    value={newTodo} />
                 {!!errorMsg && <ErrorWrapper>{errorMsg}</ErrorWrapper>}
             </div>
             <button type="submit">Add</button>
         </AddTodoContainer>
     );
+};
+
+AddTodo.defaultProps = {
+    errorMsg: ""
+};
+
+AddTodo.propTypes = {
+    errorMsg: PropTypes.string,
+    handleAddTodo: PropTypes.func.isRequired,
+    newTodo: PropTypes.string.isRequired,
+    setTodo: PropTypes.func.isRequired,
 };
 
 export default AddTodo;
