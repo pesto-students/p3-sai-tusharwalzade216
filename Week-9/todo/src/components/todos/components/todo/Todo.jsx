@@ -9,23 +9,26 @@ class Todo extends React.Component {
 
         return (
             <TodoContainer
+                aria-label="Todo Item"
                 completed={todo.completed}
                 onDoubleClick={() => completeTodo(!todo.completed, todo.id)}>
 
-                <label htmlFor="todo-state">
+                <label htmlFor={`todo-state-${todo.id}`}>
                     <input
+                        aria-label={`Complete Todo - ${todo.title}`}
                         checked={todo.completed}
-                        id="todo-state"
+                        id={`todo-state-${todo.id}`}
                         onChange={e => completeTodo(e?.target?.checked, todo.id)}
                         type="checkbox"
                         value={todo.completed}
                     />
                 </label>
 
-                <Title>{todo.title}</Title>
+                <Title aria-label={todo.title}>{todo.title}</Title>
 
                 <button
-                    id="todo-action-delete"
+                    aria-label={`Delete Todo - ${todo.title}`}
+                    id={`todo-action-delete-${todo.id}`}
                     onClick={() => deleteTodo(todo.id)}
                     type="button">
                     x
