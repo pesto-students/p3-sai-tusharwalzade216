@@ -82,15 +82,15 @@ class Todos extends React.Component {
                     newTodo={newTodo}
                     setTodo={this.setTodo} />
 
-                <TodosContainer>
-                    {todos.length ? todos.map((todo) => (
+                {todos.length ? <TodosContainer aria-label="Todos List">
+                    {todos.map((todo) => (
                         <Todo
                             completeTodo={this.handleCompleteTodo}
                             deleteTodo={this.handleDeleteTodo}
                             key={todo.id}
                             todo={todo} />
-                    )) : <Error />}
-                </TodosContainer>
+                    ))}
+                </TodosContainer> : <Error />}
             </>
         );
     }

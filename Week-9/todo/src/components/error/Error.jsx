@@ -1,11 +1,13 @@
 import PropTypes from "prop-types";
 
 import { NO_TODOS_TEXT } from "../../common/constants";
-import { Title } from "../../common/Wrappers";
+import { ErrorContainer, Title } from "../../common/Wrappers";
 
 const Error = ({ errorTitle }) => {
     return (
-        <Title>{errorTitle}</Title>
+        <ErrorContainer>
+            <Title aria-label="Error Title">{errorTitle}</Title>
+        </ErrorContainer>
     );
 };
 

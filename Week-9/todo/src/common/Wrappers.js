@@ -22,7 +22,7 @@ const AddTodoContainer = styled.form`
     & > button {
         align-self: flex-start;
         background: royalblue;
-        color: whitesmoke;
+        color: white;
         border: none;
         font-size: 1rem;
         border-radius: 0.4rem;
@@ -48,6 +48,14 @@ const AddTodoContainer = styled.form`
     `}
 `;
 
+const ErrorContainer = styled.main`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.2rem;
+`;
+
 const ErrorWrapper = styled.h5`
     color: darkred;
     text-align: start;
@@ -59,6 +67,7 @@ const Title = styled.h4`
     font-size: 1.2rem;
     font-weight: 400;
     word-break: break-all;
+    margin: 1.2 rem 0;
 `;
 
 const TodoContainer = styled.li`
@@ -135,6 +144,7 @@ const TodosContainer = styled.ul`
 
 export {
     AddTodoContainer,
+    ErrorContainer,
     ErrorWrapper,
     Title,
     TodoContainer,

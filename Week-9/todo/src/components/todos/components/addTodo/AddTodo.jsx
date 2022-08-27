@@ -4,9 +4,10 @@ import { AddTodoContainer, ErrorWrapper } from "../../../../common";
 
 const AddTodo = ({ errorMsg, handleAddTodo, newTodo, setTodo }) => {
     return (
-        <AddTodoContainer hasError={!!errorMsg} onSubmit={handleAddTodo}>
+        <AddTodoContainer aria-label="Add a new todo" hasError={!!errorMsg} onSubmit={handleAddTodo}>
             <div>
                 <input
+                    aria-label="Todo Input"
                     autoFocus
                     minLength={10}
                     maxLength={100}
@@ -15,7 +16,7 @@ const AddTodo = ({ errorMsg, handleAddTodo, newTodo, setTodo }) => {
                     required
                     type="text"
                     value={newTodo} />
-                {!!errorMsg && <ErrorWrapper>{errorMsg}</ErrorWrapper>}
+                {!!errorMsg && <ErrorWrapper aria-label={errorMsg}>{errorMsg}</ErrorWrapper>}
             </div>
             <button type="submit">Add</button>
         </AddTodoContainer>
