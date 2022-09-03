@@ -1,13 +1,18 @@
+import { BrowserRouter } from "react-router-dom";
+
 import './App.css';
-import { Todos } from './components';
+
+import { AppRoutes } from "./routes";
+import { AppBar } from "./components/organisms";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h3>Easy Todos</h3>
-      </header>
-      <Todos />
+      <AppBar />
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
     </div>
   );
 }

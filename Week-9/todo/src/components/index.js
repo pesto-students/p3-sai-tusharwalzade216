@@ -1,4 +1,5 @@
-import Error from './error';
-import Todos from './todos';
+import { Home } from "./pages";
 
-export { Error, Todos };
+export {
+    Home
+};
