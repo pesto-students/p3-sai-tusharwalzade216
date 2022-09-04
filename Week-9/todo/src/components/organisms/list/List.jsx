@@ -12,7 +12,9 @@ const List = ({ items }) => (
 );
 
 List.propTypes = {
-    items: PropTypes.array
+    items: PropTypes.arrayOf(
+        PropTypes.shape(ListItem.propTypes)
+    ),
 };
 
 List.defaultProps = {
