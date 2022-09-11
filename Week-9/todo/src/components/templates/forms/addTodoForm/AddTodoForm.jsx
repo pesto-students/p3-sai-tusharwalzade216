@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { Form } from '../../../organisms';
@@ -7,17 +8,22 @@ import { InputWithLabelAndHint } from '../../../molecules';
 
 const AddTodoForm = (props) => {
     const { onSubmit, ...inputProps } = props;
+    const [newTodo, setNewTodo] = useState('');
+
     return (
         <Form
             ariaLabel="Add Todo form"
             hasError={!!props?.errorMsg}
-            onSubmit={onSubmit}
+            onSubmit={(e) => onSubmit(e, newTodo)}
             submitButtonProps={{
                 disabled: false,
                 show: true
             }}
         >
-            <InputWithLabelAndHint {...inputProps} />
+            <InputWithLabelAndHint
+                {...inputProps}
+                onChange={(e) => setNewTodo(e?.target?.value)}
+                value={newTodo} />
         </Form>
     );
 }
@@ -36,11 +42,9 @@ AddTodoForm.propTypes = {
     label: PropTypes.string,
     maxLength: PropTypes.number,
     minLength: PropTypes.number,
-    onChange: PropTypes.func.isRequired,
     placeholder: PropTypes.string,
     required: PropTypes.bool,
     type: PropTypes.oneOf(Object.values(INPUT_TYPES)).isRequired,
-    value: PropTypes.string,
 };
 
 AddTodoForm.defaultProps = {
@@ -59,7 +63,6 @@ AddTodoForm.defaultProps = {
     minLength: 0,
     placeholder: "Enter your input",
     required: false,
-    value: "",
 };
 
 export default AddTodoForm;

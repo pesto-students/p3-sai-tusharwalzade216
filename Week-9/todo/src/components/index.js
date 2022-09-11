@@ -1,5 +1,4 @@
-import { Home } from "./pages";
-
-export {
-    Home
-};
+export * from "./atoms";
+export * from "./molecules";
+export * from "./organisms";
+export * from "./templates";

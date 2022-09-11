@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 
-import { BrandLabel, Header } from "../../atoms";
+import { AppHeader, BrandLabel } from "../../atoms";
 
 const AppBar = () => (
-    <Header>
+    <AppHeader>
         <BrandLabel>Easy Todos</BrandLabel>
-    </Header>
+    </AppHeader>
 );
 
 AppBar.propTypes = {

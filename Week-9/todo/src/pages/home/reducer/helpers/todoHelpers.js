@@ -17,7 +17,6 @@ const handleAddTodo = (state, action) => {
             };
             return {
                 errorMsg: '',
-                newTodo: '',
                 todoList: [...state?.todoList, todo],
                 todoListKey: state.todoListKey + 1,
             };

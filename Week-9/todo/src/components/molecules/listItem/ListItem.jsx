@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 
 import { idUtil } from "../../../utils";
 import { Button, Text } from "../../atoms";
-import { InputWithLabelAndHint } from "../../molecules";
 import { INPUT_TYPES } from '../../../constants';
 import { ListItemContainer } from "./listItem.styled";
+import { InputWithLabelAndHint } from "../../molecules";
 
 const ListItem = (props) => {
     const { id, onButtonClick, title, ...inputProps } = props;

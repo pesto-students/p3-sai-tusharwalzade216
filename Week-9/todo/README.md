@@ -16,13 +16,13 @@ A Simple web app for managing a quick todo list
 
 ## Snaps
 
-![Snap1](./public/images/screenshot1.PNG)
+![Snap1](./src/assets/images/screenshot1.PNG)
 
-![Snap2](./public/images/screenshot2.PNG)
+![Snap2](./src/assets/images/screenshot2.PNG)
 
-![Snap3](./public/images/screenshot3.PNG)
+![Snap3](./src/assets/images/screenshot3.PNG)
 
-![Snap4](./public/images/screenshot4.PNG)
+![Snap4](./src/assets/images/screenshot4.PNG)
 
 # Getting Started with Create React App
 

@@ -1,18 +1,13 @@
 import { useCallback, useEffect, useReducer } from "react";
 
-import { storageUtil } from "../../../utils";
-import { AddTodoForm } from "../../templates";
-import { List as TodoList } from "../../organisms";
+import { storageUtil } from "../../utils";
 import { INITIAL_STATE, reducer } from "./reducer";
-import { EmptyListPlaceholder } from "../../molecules";
+import { AddTodoForm } from "../../components/templates";
+import { List as TodoList } from "../../components/organisms";
+import { EmptyListPlaceholder } from "../../components/molecules";
 
 const Home = () => {
     const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
-
-    const handleOnChange = (e) => dispatch({
-        payload: { value: e?.target?.value },
-        type: "SET_INPUT",
-    });
 
     const handleOnDeleteItem = (id) => dispatch({
         payload: { id: id },
@@ -33,13 +28,13 @@ const Home = () => {
             onChange: handleOnToggleItem
         })), []);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e, todo) => {
         e.preventDefault();
         dispatch({
             payload: {
                 onButtonClick: handleOnDeleteItem,
                 onChange: handleOnToggleItem,
-                title: state?.newTodo,
+                title: todo,
             },
             type: "ADD_TODO",
         });
@@ -77,16 +72,14 @@ const Home = () => {
                 label="Add new todo"
                 maxLength={100}
                 minLength={10}
-                onChange={handleOnChange}
                 onSubmit={handleSubmit}
                 placeholder="Type in to add a new todo..."
                 required={true}
                 type="text"
-                value={state?.newTodo}
             />
 
             {!!state?.todoList?.length ?
-                <TodoList items={state?.todoList} key={state?.todoListKey} /> :
+                <TodoList items={state?.todoList} /> :
                 <EmptyListPlaceholder>
                     Sorry, there are no todos available, please try to add some.
                 </EmptyListPlaceholder>
