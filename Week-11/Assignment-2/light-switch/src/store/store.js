@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import lightSwitchReducer from '../components/templates/lightSwitch/redux/reducer';
+import { lightSwitchReducer } from '../components';
 
 const store = createStore(
     lightSwitchReducer
