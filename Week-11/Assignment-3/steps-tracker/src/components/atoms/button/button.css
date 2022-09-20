@@ -1,0 +1,31 @@
+.button {
+  border: 0.04rem solid black;
+  margin: 0.8rem auto;
+  max-width: 16rem;
+  padding: 0.8rem;
+  transition: .5s ease-in-out;
+  width: 100%;
+}
+
+.reset {
+  background: #d3d3d3;
+  color: #000;
+}
+
+.reset:hover {
+  background: #808080;
+  color: #fff;
+  box-shadow: 0 0.4rem 0.6rem 0 rgba(0, 0, 0, 0.2),
+    0 0.4rem 1.2rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.submit {
+  background: #7066FB;
+  color: #fff;
+}
+
+.submit:hover {
+  background: #8b4513;
+  box-shadow: 0 0.4rem 0.6rem 0 rgba(0, 0, 0, 0.2),
+    0 0.4rem 1.2rem 0 rgba(0, 0, 0, 0.2);
+}
