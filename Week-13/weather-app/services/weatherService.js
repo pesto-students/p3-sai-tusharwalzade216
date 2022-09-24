@@ -1,7 +1,7 @@
 const { default: axios } = require('axios');
 
 const config = require('../config');
-const { sendError, sendSuccess } = require('../middlewares');
+const { sendError, sendSuccess, paginate } = require('../middlewares');
 
 const API_BASE_URL = config.API_BASE_URL;
 
@@ -18,11 +18,16 @@ const _getWeatherDataForCity = async ({ city, query }) => {
 };
 
 const _getForecastForLast5Days3Hours = async ({ city, query }) => {
+    const { limit, page, appid } = query;
     try {
         const { data } = await axios.get(
             `${API_BASE_URL}/forecast`,
-            { params: { q: city, ...query } }
+            { params: { q: city, appid } }
         );
+
+        if (data?.list?.length && limit && page)
+            data['list'] = paginate(data?.list, limit, page);
+
         return sendSuccess(data);
     } catch (error) {
         return sendError(error);
