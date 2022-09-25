@@ -1,1 +1,4 @@
-module.exports = { ...require('./pagination') };
+module.exports = {
+    ...require('./pagination'),
+    ...require('./response')
+};

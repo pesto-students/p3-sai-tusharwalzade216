@@ -1,4 +1,4 @@
-const { _getWeatherDataForCity, _getForecastForLast5Days3Hours, _getWeatherDataForListOfCities } = require("../services");
+const { _getWeatherDataForCity, _getForecastForNextXDays, _getWeatherDataForListOfCities } = require("../services");
 
 const getWeatherDataForCity = async (req, res) => {
     try {
@@ -12,17 +12,18 @@ const getWeatherDataForCity = async (req, res) => {
     }
 };
 
-const getForecastForLast5Days3Hours = async (req, res) => {
+const getForecastForNextXDays = async (req, res) => {
     try {
-        const data = await _getForecastForLast5Days3Hours({
+        const data = await _getForecastForNextXDays({
             city: req.params.city,
+            days: req.params.days,
             query: req.query
         });
         res.send(data);
     } catch (error) {
         res.send(error);
     }
-}
+};
 
 const getWeatherDataForListOfCities = async (req, res) => {
     try {
@@ -34,10 +35,10 @@ const getWeatherDataForListOfCities = async (req, res) => {
     } catch (error) {
         res.send(error);
     }
-}
+};
 
 module.exports = {
     getWeatherDataForCity,
-    getForecastForLast5Days3Hours,
+    getForecastForNextXDays,
     getWeatherDataForListOfCities,
 };
