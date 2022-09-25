@@ -23,3 +23,19 @@ All the workflows should work as expected.
 5. Include the hostname of the deployed web application in the readMe file.
 
 6. Push the readMe to the github repo
+
+## Deployment Steps
+
+- Add a new app on vercel account, signup if required
+
+- install `vercel` if not available - `npm i -g vercel`
+
+- run `vercel --prod` command
+
+## Live Instance
+
+[URL Shortener](https://url-shortener-one-ivory.vercel.app/)
+
+## Lighthouse Reports
+
+Please refer to the reports in assets folder.
