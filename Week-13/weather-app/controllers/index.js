@@ -1,1 +1,1 @@
-module.exports = { ...require('./weatherController') };
+module.exports = { ...require('./weather.controller') };
