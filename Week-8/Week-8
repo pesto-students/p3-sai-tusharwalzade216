@@ -1,1 +1,37 @@
+## Assignment Introduction:
 
+● In this week student will be a given a set of problem statement on graph and trees
+
+## Benchmarks
+
+● All the problem should have an optimize solutions
+
+● All the problem statement should have the time and space complexity mention in the code comment
+
+● The code should be readable and must follow good coding practice.
+
+● Keep the code as modular as you can
+
+## Instructor evaluation guidelines:
+
+● Was the person able to understand what the question was asking?
+
+● Were they able to find the brute force solution? Were they able to find a better solution or the optimal one?
+
+● Did they consider the tradeoffs of a certain approach? Did they consider edge cases?
+
+● How successful were they at translating their ideas into workable code?
+
+● Was their code readable and well-structured?
+
+● Were they concerned about the quality of code in their solution?
+
+● Did they pay close attention to detail?
+
+## Learning Outcomes:
+
+● Student will learn how to implement a graph and trees
+
+● Student will learn and implement code to iterate and search node through agraph and tree
+
+● Students will learn and implement various graph traversal method
