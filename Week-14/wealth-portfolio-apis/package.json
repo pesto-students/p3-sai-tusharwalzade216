@@ -1,0 +1,25 @@
+{
+  "name": "wealth-portfolio-apis",
+  "version": "1.0.0",
+  "description": "a backend app which manages wealth portfolio of multiple users",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "funds",
+    "portfolio",
+    "wealth",
+    "wealth",
+    "portfolio"
+  ],
+  "author": "tusharwalzade216@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-rate-limit": "^6.6.0",
+    "express-validator": "^6.14.2"
+  }
+}
