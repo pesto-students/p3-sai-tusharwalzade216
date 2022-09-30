@@ -1,0 +1,402 @@
+#Req:   http://localhost:8080/api/weather/london
+
+#Resp:
+{
+  "error": false,
+  "data": {
+    "coord": {
+      "lon": -0.1257,
+      "lat": 51.5085
+    },
+    "weather": [
+      {
+        "id": 804,
+        "main": "Clouds",
+        "description": "overcast clouds",
+        "icon": "04d"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 288.99,
+      "feels_like": 287.91,
+      "temp_min": 287.65,
+      "temp_max": 289.95,
+      "pressure": 1016,
+      "humidity": 49
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 3.09,
+      "deg": 310
+    },
+    "clouds": {
+      "all": 100
+    },
+    "dt": 1664118569,
+    "sys": {
+      "type": 2,
+      "id": 2075535,
+      "country": "GB",
+      "sunrise": 1664085064,
+      "sunset": 1664128404
+    },
+    "timezone": 3600,
+    "id": 2643743,
+    "name": "London",
+    "cod": 200
+  }
+}
+
+-------------------------------------------------------------------------------
+
+#Req:   http://localhost:8080/api/weather/list
+#Payload:
+{
+  "cities": ["Sangamner", "Nashik", "Shirdi"]
+}
+
+#Resp:
+{
+  "error": false,
+  "data": [
+    {
+      "coord": {
+        "lon": 74.2167,
+        "lat": 19.5667
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04n"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 296.87,
+        "feels_like": 297.44,
+        "temp_min": 296.87,
+        "temp_max": 296.87,
+        "pressure": 1010,
+        "humidity": 82,
+        "sea_level": 1010,
+        "grnd_level": 948
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 3.5,
+        "deg": 286,
+        "gust": 6.11
+      },
+      "clouds": {
+        "all": 90
+      },
+      "dt": 1664118734,
+      "sys": {
+        "country": "IN",
+        "sunrise": 1664067149,
+        "sunset": 1664110644
+      },
+      "timezone": 19800,
+      "id": 1257436,
+      "name": "Sangamner",
+      "cod": 200
+    },
+    {
+      "coord": {
+        "lon": 73.8,
+        "lat": 19.9833
+      },
+      "weather": [
+        {
+          "id": 802,
+          "main": "Clouds",
+          "description": "scattered clouds",
+          "icon": "03n"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 294.39,
+        "feels_like": 295.02,
+        "temp_min": 294.39,
+        "temp_max": 294.39,
+        "pressure": 1011,
+        "humidity": 94,
+        "sea_level": 1011,
+        "grnd_level": 946
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 2.72,
+        "deg": 273,
+        "gust": 4.04
+      },
+      "clouds": {
+        "all": 32
+      },
+      "dt": 1664118629,
+      "sys": {
+        "country": "IN",
+        "sunrise": 1664067250,
+        "sunset": 1664110743
+      },
+      "timezone": 19800,
+      "id": 1261731,
+      "name": "Nashik",
+      "cod": 200
+    },
+    {
+      "coord": {
+        "lon": 74.4833,
+        "lat": 19.7667
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04n"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 297.39,
+        "feels_like": 297.88,
+        "temp_min": 297.39,
+        "temp_max": 297.39,
+        "pressure": 1010,
+        "humidity": 77,
+        "sea_level": 1010,
+        "grnd_level": 953
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 4.98,
+        "deg": 310,
+        "gust": 8.4
+      },
+      "clouds": {
+        "all": 98
+      },
+      "dt": 1664118734,
+      "sys": {
+        "country": "IN",
+        "sunrise": 1664067085,
+        "sunset": 1664110580
+      },
+      "timezone": 19800,
+      "id": 1256489,
+      "name": "Shirdi",
+      "cod": 200
+    }
+  ]
+}
+
+-------------------------------------------------------------------------------
+
+#Req:   http://localhost:8080/api/forecast/london?page=1&limit=2&weatherType=clouds&date=2022-09-28
+
+#Resp:
+{
+  "error": false,
+  "data": {
+    "cod": "200",
+    "message": 0,
+    "cnt": 40,
+    "list": [
+      {
+        "dt": 1664323200,
+        "main": {
+          "temp": 282.81,
+          "feels_like": 280.6,
+          "temp_min": 282.81,
+          "temp_max": 282.81,
+          "pressure": 999,
+          "sea_level": 999,
+          "grnd_level": 996,
+          "humidity": 72,
+          "temp_kf": 0
+        },
+        "weather": [
+          {
+            "id": 802,
+            "main": "Clouds",
+            "description": "scattered clouds",
+            "icon": "03n"
+          }
+        ],
+        "clouds": {
+          "all": 48
+        },
+        "wind": {
+          "speed": 4.29,
+          "deg": 268,
+          "gust": 11.06
+        },
+        "visibility": 10000,
+        "pop": 0,
+        "sys": {
+          "pod": "n"
+        },
+        "dt_txt": "2022-09-28 00:00:00"
+      },
+      {
+        "dt": 1664334000,
+        "main": {
+          "temp": 281.96,
+          "feels_like": 279.64,
+          "temp_min": 281.96,
+          "temp_max": 281.96,
+          "pressure": 999,
+          "sea_level": 999,
+          "grnd_level": 995,
+          "humidity": 79,
+          "temp_kf": 0
+        },
+        "weather": [
+          {
+            "id": 804,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "icon": "04n"
+          }
+        ],
+        "clouds": {
+          "all": 85
+        },
+        "wind": {
+          "speed": 4.1,
+          "deg": 288,
+          "gust": 10.64
+        },
+        "visibility": 10000,
+        "pop": 0,
+        "sys": {
+          "pod": "n"
+        },
+        "dt_txt": "2022-09-28 03:00:00"
+      }
+    ],
+    "city": {
+      "id": 2643743,
+      "name": "London",
+      "coord": {
+        "lat": 51.5085,
+        "lon": -0.1257
+      },
+      "country": "GB",
+      "population": 1000000,
+      "timezone": 3600,
+      "sunrise": 1664085064,
+      "sunset": 1664128404
+    },
+    "count": 8
+  }
+}
+
+-------------------------------------------------------------------------------
+
+#Req:   http://localhost:8080/api/forecast/london/4?page=1&limit=2&weatherType=clouds
+
+#Resp:
+{
+  "error": false,
+  "data": {
+    "cod": "200",
+    "message": 0,
+    "cnt": 40,
+    "list": [
+      {
+        "dt": 1664128800,
+        "main": {
+          "temp": 288.56,
+          "feels_like": 287.41,
+          "temp_min": 287.85,
+          "temp_max": 288.56,
+          "pressure": 1016,
+          "sea_level": 1016,
+          "grnd_level": 1013,
+          "humidity": 48,
+          "temp_kf": 0.71
+        },
+        "weather": [
+          {
+            "id": 804,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "icon": "04n"
+          }
+        ],
+        "clouds": {
+          "all": 100
+        },
+        "wind": {
+          "speed": 2.54,
+          "deg": 263,
+          "gust": 5.64
+        },
+        "visibility": 10000,
+        "pop": 0,
+        "sys": {
+          "pod": "n"
+        },
+        "dt_txt": "2022-09-25 18:00:00"
+      },
+      {
+        "dt": 1664139600,
+        "main": {
+          "temp": 287.4,
+          "feels_like": 286.34,
+          "temp_min": 286.64,
+          "temp_max": 287.4,
+          "pressure": 1015,
+          "sea_level": 1015,
+          "grnd_level": 1010,
+          "humidity": 56,
+          "temp_kf": 0.76
+        },
+        "weather": [
+          {
+            "id": 804,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "icon": "04n"
+          }
+        ],
+        "clouds": {
+          "all": 100
+        },
+        "wind": {
+          "speed": 4.53,
+          "deg": 260,
+          "gust": 8.74
+        },
+        "visibility": 10000,
+        "pop": 0,
+        "sys": {
+          "pod": "n"
+        },
+        "dt_txt": "2022-09-25 21:00:00"
+      }
+    ],
+    "city": {
+      "id": 2643743,
+      "name": "London",
+      "coord": {
+        "lat": 51.5085,
+        "lon": -0.1257
+      },
+      "country": "GB",
+      "population": 1000000,
+      "timezone": 3600,
+      "sunrise": 1664085064,
+      "sunset": 1664128404
+    },
+    "count": 28
+  }
+}
+
+-------------------------------------------------------------------------------

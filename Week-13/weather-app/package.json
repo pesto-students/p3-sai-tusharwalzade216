@@ -1,0 +1,16 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "an app to retrieve weather data for the specified inputs/ cities",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "tusharwalzade216@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1"
+  }
+}
